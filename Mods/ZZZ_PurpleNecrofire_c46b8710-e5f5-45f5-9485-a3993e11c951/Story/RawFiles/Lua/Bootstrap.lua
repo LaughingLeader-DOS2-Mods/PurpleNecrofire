@@ -100,7 +100,6 @@ local ModuleLoad = function ()
             Template = "c788b988-a772-47c7-ae4f-844a170435f3"
         }
         stat_overrides["Shout_Summon_SuicideBomberNecrofire"] = {
-            Template = "c788b988-a772-47c7-ae4f-844a170435f3",
             CastEffect = "LLPURPLEFIRE_FX_Skills_Fire_Cast_Shout_Supernova_01,Detach"
         }
         stat_overrides["Projectile_Summon_InfectiousFire_Shorter"] = {
@@ -143,13 +142,9 @@ local ModuleLoad = function ()
         icon_overrides["INF_NECROFIRE_CAT"] = icon_overrides["INF_NECROFIRE"]
     end
 
-    local leaderlib_enabled = false
-
     --LeaderLib_7e737d2f-31d2-4751-963f-be6ccc59cd0c
     if _G["LeaderLib"] ~= nil or Ext.IsModLoaded("7e737d2f-31d2-4751-963f-be6ccc59cd0c") then
         Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Overriding necrofire skills/statuses to use LeaderLib's icons.")
-        leaderlib_enabled = true
-
         for stat,value in pairs(icon_overrides) do
             --Ext.StatSetAttribute(stat, "Icon", value)
             local stat_override_entry = get_stat_override(stat)

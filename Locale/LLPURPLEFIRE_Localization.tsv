@@ -1,9 +1,9 @@
 Key	Content
+LLPURPLEFIRE_Mod_DisplayName	Purple NecroFire
+LLPURPLEFIRE_Mod_Description	Makes all necrofire surfaces/clouds and related effects purple.<br>If the OsiTools v36 or higher is present, necrofire-related skills will use the new purple effects in a compatible way (works with overhauls).<br>If LeaderLib and OsiTools v36 or higher is present, new icons will be used for necrofire statuses and skills.
 Projectile_InfectiousFlame_LLPURPLEFIRE_DisplayName	<font color='#7f5cff'>Epidemic Of Fire</font>
 Projectile_InfectiousFlame_LLPURPLEFIRE_Description	Fire a <font color='#7f5cff'>cursed flame</font> which will fork on impact up to [1] times, dealing [2] and leaving a <font color='#7f5cff'>cursed fire surface</font> in its wake.
 Projectile_InfectiousFlame_LLPURPLEFIRE_Odin_Description	Send a <font color='#7f5cff'>cursed flame</font> that will split on impact up to [1] times, dealing [2] and <font color='#fe6e27'>Scorching</font> hit <font color='#aa3938'>enemies</font>. <br><br>Leaves a <font color='#7f5cff'>Necrofire surface</font> behind.
 Projectile_LLPURPLEFIRE_CursedFireball_DisplayName	<font color='#7f5cff'>Cursed Fireball</font>
 Projectile_LLPURPLEFIRE_CursedFireball_Description	Hurl a <font color='#7f5cff'>cursed orb of necrofire</font> at a target, dealing [1].<br>Leaves behind a <font color='#7f5cff'>cursed fire surface</font> at the point of impact.
 Projectile_LLPURPLEFIRE_CursedFireball_Odin_Description	Hurl a <font color='#7f5cff'>cursed orb of necrofire</font> at a target, dealing [1] and applying <font color="#fe6e27">Scorch</font> to all <font color="#aa3938">enemies</font>.<br>Leaves behind a <font color='#7f5cff'>cursed fire surface</font> at the point of impact.
-LLPURPLEFIRE_Mod_DisplayName	Purple NecroFire
-LLPURPLEFIRE_Mod_Description	Makes all necrofire surfaces/clouds and related effects purple.<br>If the OsiTools v36 or higher is present, necrofire-related skills will use the new purple effects in a compatible way (works with overhauls).<br>If LeaderLib and OsiTools v36 or higher is present, new icons will be used for necrofire statuses and skills.
