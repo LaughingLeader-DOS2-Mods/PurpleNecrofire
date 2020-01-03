@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1535496238" />
+    <version major="3" minor="6" revision="0" build="4" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="0bb1ab4f-eb4c-4bca-82b5-db1d8b153397" type="23" />
+            <attribute id="Name" value="TestMod_LeaderLibModSupport" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="9e9cc06c-40b1-4345-b7fe-b9b4341cf6f3" type="23" />
+        </node>
+    </region>
+</save>

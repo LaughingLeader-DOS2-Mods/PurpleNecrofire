@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1534590235" />
+    <version major="3" minor="6" revision="0" build="3" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="024c4297-aa9a-1e5d-4951-af226b4d90ef" type="23" />
+            <attribute id="Name" value="BarrelmancyUnleashed" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="8fd8e9b6-8554-4ac4-ab29-3314d55569f9" type="23" />
+        </node>
+    </region>
+</save>

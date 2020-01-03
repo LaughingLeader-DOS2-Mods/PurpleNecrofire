@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="1" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="92de32f0-9da6-4b8b-9c83-a187946e4206" type="23" />
+            <attribute id="Name" value="Debug_AnimPlus_CCP" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="96035870-5d69-48dd-84aa-227d3936c3c4" type="23" />
+        </node>
+    </region>
+</save>

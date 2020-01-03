@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="4" build="1" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="e79b9f0f-4b85-4685-8466-1ec8d034c441" type="23" />
+            <attribute id="Name" value="LeaderSoundLibrary" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="5d46d26a-1280-4427-8976-9fb6521a1b72" type="23" />
+        </node>
+    </region>
+</save>

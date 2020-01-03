@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="4" build="1" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="59f1d870-bdc6-45cb-a8fc-26a1b6afde33" type="23" />
+            <attribute id="Name" value="HumanSebille" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="13de5cfb-3fa4-493a-be1d-bcbc30ff038c" type="23" />
+        </node>
+    </region>
+</save>

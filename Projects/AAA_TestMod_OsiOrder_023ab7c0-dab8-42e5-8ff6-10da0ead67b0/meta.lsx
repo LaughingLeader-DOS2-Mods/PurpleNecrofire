@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="023ab7c0-dab8-42e5-8ff6-10da0ead67b0" type="23" />
+            <attribute id="Name" value="AAA_TestMod_OsiOrder" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="4c72ea4d-0bc0-4585-bd98-2871406e8d52" type="23" />
+        </node>
+    </region>
+</save>

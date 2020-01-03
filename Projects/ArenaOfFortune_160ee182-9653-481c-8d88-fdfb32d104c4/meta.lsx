@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="3" build="1" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="160ee182-9653-481c-8d88-fdfb32d104c4" type="23" />
+            <attribute id="Name" value="ArenaOfFortune" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="59b0cac0-92f8-41ba-897f-38fb817c8316" type="23" />
+        </node>
+    </region>
+</save>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="4" build="1" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="1b1bd616-7506-45d9-aaab-8fcf7cea218d" type="23" />
+            <attribute id="Name" value="RelocatedFortJoyRespecMirror" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="3450245d-27ae-4b4d-a075-dd7145f74bd0" type="23" />
+        </node>
+    </region>
+</save>

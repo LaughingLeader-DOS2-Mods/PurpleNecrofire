@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="1" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="d84af206-0a9e-4f5b-b2c7-b2646cfc8f78" type="23" />
+            <attribute id="Name" value="TestMod_MimicryWeaponExpansion" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="3398ba05-4854-44aa-a76e-131f11f859a0" type="23" />
+        </node>
+    </region>
+</save>

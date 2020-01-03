@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1534590406" />
+    <version major="3" minor="6" revision="0" build="3" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="55d4671f-085f-7574-d70e-f96843e2d301" type="23" />
+            <attribute id="Name" value="LeadershipEnhanced" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="46d7ea80-454b-4654-94cb-7fcd2c5c6117" type="23" />
+        </node>
+    </region>
+</save>

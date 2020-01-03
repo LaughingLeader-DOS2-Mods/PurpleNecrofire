@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1536004421" />
+    <version major="3" minor="6" revision="0" build="4" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="bb96cf17-ea9a-4041-b86b-80be856d4f9a" type="23" />
+            <attribute id="Name" value="TestMod_StrangeBugs" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="7a330e08-f193-4355-8f19-d97821f226f5" type="23" />
+        </node>
+    </region>
+</save>

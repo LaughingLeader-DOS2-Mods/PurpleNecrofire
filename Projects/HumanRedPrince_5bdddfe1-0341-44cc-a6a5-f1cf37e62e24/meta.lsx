@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="4" build="1" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="5bdddfe1-0341-44cc-a6a5-f1cf37e62e24" type="23" />
+            <attribute id="Name" value="HumanRedPrince" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="620fcc94-6309-48b3-a9fe-18ad4c23416e" type="23" />
+        </node>
+    </region>
+</save>

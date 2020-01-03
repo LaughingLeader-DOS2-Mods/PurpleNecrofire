@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="1" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="2750736f-5926-43a5-9d55-5759c6b08f22" type="23" />
+            <attribute id="Name" value="ReducedEnemyXP_50Percent" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="1f625e77-ccea-49b1-b8c7-deddd37d38f9" type="23" />
+        </node>
+    </region>
+</save>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="1" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="857effb0-c59b-4cf5-98c6-8a7d1b9b82bd" type="23" />
+            <attribute id="Name" value="AIUnleashed" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="9e695f0e-16ce-4d06-8578-1fd616675a09" type="23" />
+        </node>
+    </region>
+</save>

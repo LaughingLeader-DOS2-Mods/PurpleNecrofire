@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1536873737" />
+    <version major="3" minor="6" revision="0" build="5" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="326b8784-edd7-4950-86d8-fcae9f5c457c" type="23" />
+            <attribute id="Name" value="AnimationsPlus" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="3f008c8d-83f3-4a13-90ae-c7061cf4adb8" type="23" />
+        </node>
+    </region>
+</save>

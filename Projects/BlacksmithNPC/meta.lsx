@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1534617721" />
+    <version major="3" minor="6" revision="0" build="3" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="6aa3ebb9-9ba7-4aaf-980f-68728ae01ba8" type="23" />
+            <attribute id="Name" value="BlacksmithNPC" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="052c1407-4aef-4c7e-98c8-cf70224d245b" type="23" />
+        </node>
+    </region>
+</save>

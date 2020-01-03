@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="4" build="1" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="22dc1500-0b39-4685-8f86-71f13530d15c" type="23" />
+            <attribute id="Name" value="TestMod_OsiExtender" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="5f2f1a22-748d-4cb7-969e-c10ebddace0a" type="23" />
+        </node>
+    </region>
+</save>

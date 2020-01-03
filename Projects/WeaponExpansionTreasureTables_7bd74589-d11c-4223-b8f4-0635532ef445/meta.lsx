@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1536879140" />
+    <version major="3" minor="6" revision="0" build="5" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="7bd74589-d11c-4223-b8f4-0635532ef445" type="23" />
+            <attribute id="Name" value="WeaponExpansionTreasureTables" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="b0641b23-ffa1-4bae-b597-b157703b171c" type="23" />
+        </node>
+    </region>
+</save>
