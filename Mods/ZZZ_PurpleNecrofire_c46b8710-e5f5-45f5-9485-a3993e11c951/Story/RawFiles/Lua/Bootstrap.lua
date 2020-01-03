@@ -18,12 +18,16 @@ local stat_overrides = {
     Projectile_EnemyFireball_Cursed = {
         Template = "029817d2-82d7-4bd6-b30e-3d1f5efdc9c8",
         PrepareEffect = "LLPURPLEFIRE_FX_Skills_NecroFireball_Prepare_Fire_Root_01,KeepRot;LLPURPLEFIRE_FX_Skills_NecroFireball_Prepare_Fire_Hand_01:Dummy_L_HandFX,Dummy_R_HandFX",
-        CastEffect = "LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Fire_Hand_01:Dummy_R_HandFX:cast;LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Throw_Hand_01:Dummy_R_HandFX"
+        CastEffect = "LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Fire_Hand_01:Dummy_R_HandFX:cast;LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Throw_Hand_01:Dummy_R_HandFX",
+        DisplayName = "Projectile_LLPURPLEFIRE_CursedFireball_DisplayName",
+        Description = "Projectile_LLPURPLEFIRE_CursedFireball_Description"
     },
     Projectile_EnemyFireball_Cursed_Insect = {
         Template = "029817d2-82d7-4bd6-b30e-3d1f5efdc9c8",
         PrepareEffect = "LLPURPLEFIRE_FX_Char_Creatures_Giant_Insect_Fire_Prepare_01_Root,KeepRot;LLPURPLEFIRE_FX_Char_Creatures_Giant_Insect_Fire_Prepare_01:Dummy_L_HandFX,Dummy_R_HandFX",
-        CastEffect = "LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Fire_Hand_01:Dummy_CastFX:cast;LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Throw_Hand_01:Dummy_CastFX"
+        CastEffect = "LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Fire_Hand_01:Dummy_CastFX:cast;LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Throw_Hand_01:Dummy_CastFX",
+        DisplayName = "Projectile_LLPURPLEFIRE_CursedFireball_DisplayName",
+        Description = "Projectile_LLPURPLEFIRE_CursedFireball_Description"
     },
     Target_NecrofireInfusion = {
         PrepareEffect = "LLPURPLEFIRE_FX_Skills_Totem_Prepare_Totem_Root_NecroFire_01,KeepRot,Detach",
@@ -67,27 +71,105 @@ stat_overrides["Projectile_EnemyInfectiousFlame"] = stat_overrides["Projectile_I
 stat_overrides["Projectile_IncarnateInfectiousFlame"] = stat_overrides["Projectile_InfectiousFlame"]
 stat_overrides["Projectile_EnemyInfectiousFlame_Puppet"] = stat_overrides["Projectile_InfectiousFlame"]
 
-stat_overrides["Projectile_IncarnateInfectiousFlame"] = stat_overrides["Target_NecrofireInfusion"]
+local icon_overrides = {
+    Projectile_InfectiousFlame = "LLPURPLEFIRE_Skills_EpidemicOfFire",
+    Target_NecrofireInfusion = "LLPURPLEFIRE_Skills_NecroFireinfusion",
+    Projectile_EnemyFireball_Cursed = "LLPURPLEFIRE_Skills_CursedFireball",
+    INF_NECROFIRE = "LLPURPLEFIRE_Skills_NecroFireinfusion",
+    INF_NECROFIRE_G = "LLPURPLEFIRE_Skills_NecroFireinfusion",
+    NECROFIRE = "LLPURPLEFIRE_Status_NecroFire",
+    PERMANENT_NECROFIRE = "LLPURPLEFIRE_Status_NecroFire"
+}
+
+local function get_stat_override(statname)
+    for k,v in pairs(stat_overrides) do
+        if k == statname then
+            return v
+        end
+    end
+    return nil
+end
 
 local ModuleLoad = function ()
     Ext.Print("[ZZZ_PurpleNecrofire:Bootstrap.lua] Module is loading.")
+
+    --Larian's Pet Power Mod
+    if Ext.IsModLoaded("d2507d43-efce-48b8-ba5e-5dd136c715a7") then
+        Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Pet Power Larian mod detected. Overriding relevant stats.")
+        stat_overrides["Projectile_Summon_BomberProjectile_Necrofire"] = {
+            Template = "c788b988-a772-47c7-ae4f-844a170435f3"
+        }
+        stat_overrides["Shout_Summon_SuicideBomberNecrofire"] = {
+            Template = "c788b988-a772-47c7-ae4f-844a170435f3",
+            CastEffect = "LLPURPLEFIRE_FX_Skills_Fire_Cast_Shout_Supernova_01,Detach"
+        }
+        stat_overrides["Projectile_Summon_InfectiousFire_Shorter"] = {
+            Template = "6e10a3a3-514f-4fad-b822-3892e106c131",
+            PrepareEffect = "LLPURPLEFIRE_FX_Skills_Fire_Prepare_Voodoo_Root_02,KeepRot,Detach;LLPURPLEFIRE_FX_Skills_Fire_Prepare_Voodoo_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX",
+            CastEffect = "LLPURPLEFIRE_FX_Skills_Fire_Cast_Beam_Fire_Hand_01_Shorter:Dummy_CastFX:cast"
+        }
+
+        stat_overrides["INF_NECROFIRE_INCARNATE_S"] = stat_overrides["INF_NECROFIRE"]
+        stat_overrides["INF_NECROFIRE_INCARNATE_G"] = stat_overrides["INF_NECROFIRE_G"]
+
+        icon_overrides["Projectile_Summon_InfectiousFire_Shorter"] = icon_overrides["Projectile_InfectiousFlame"]
+        
+        stat_overrides["INF_NECROFIRE_INCARNATE_S"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_INCARNATE_G"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_BONEPILE"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_PLANT"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_CORPSE"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_OILBLOB"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_FIRESLUG"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_CONDOR"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_NEWT"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_POISONSLUG"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_SOULWOLF"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_TOY"]["FormatColor"] = "Summon"
+        stat_overrides["INF_NECROFIRE_CAT"]["FormatColor"] = "Summon"
+
+        icon_overrides["INF_NECROFIRE_INCARNATE_S"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_INCARNATE_G"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_BONEPILE"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_PLANT"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_CORPSE"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_OILBLOB"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_FIRESLUG"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_CONDOR"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_NEWT"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_POISONSLUG"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_SOULWOLF"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_TOY"] = icon_overrides["INF_NECROFIRE"]
+        icon_overrides["INF_NECROFIRE_CAT"] = icon_overrides["INF_NECROFIRE"]
+    end
+
+    local leaderlib_enabled = false
+
     --LeaderLib_7e737d2f-31d2-4751-963f-be6ccc59cd0c
     if _G["LeaderLib"] ~= nil or Ext.IsModLoaded("7e737d2f-31d2-4751-963f-be6ccc59cd0c") then
-        Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Overriding green flame skills/statuses to use LeaderLib's icons.")
-        Ext.StatSetAttribute("Projectile_InfectiousFlame", "Icon", "LLPURPLEFIRE_Skills_EpidemicOfFire")
-        Ext.StatSetAttribute("Target_NecrofireInfusion", "Icon", "LLPURPLEFIRE_Skills_NecroFireinfusion")
-        Ext.StatSetAttribute("Projectile_EnemyFireball_Cursed", "Icon", "LLPURPLEFIRE_Skills_CursedFireball")
-        Ext.StatSetAttribute("INF_NECROFIRE", "Icon", "LLPURPLEFIRE_Skills_NecroFireinfusion")
-        Ext.StatSetAttribute("INF_NECROFIRE_G", "Icon", "LLPURPLEFIRE_Skills_NecroFireinfusion")
-        Ext.StatSetAttribute("NECROFIRE", "Icon", "LLPURPLEFIRE_Status_NecroFire")
-        Ext.StatSetAttribute("PERMANENT_NECROFIRE", "Icon", "LLPURPLEFIRE_Status_NecroFire")
+        Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Overriding necrofire skills/statuses to use LeaderLib's icons.")
+        leaderlib_enabled = true
+
+        for stat,value in pairs(icon_overrides) do
+            --Ext.StatSetAttribute(stat, "Icon", value)
+            local stat_override_entry = get_stat_override(stat)
+            if stat_override_entry ~= nil then
+                stat_override_entry["Icon"] = value
+            else
+                stat_overrides[stat] = {
+                    Icon = value
+                }
+            end
+        end
     end
+
     for statname,overrides in pairs(stat_overrides) do
         for property,value in pairs(overrides) do
             Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Overriding stat: " .. statname .. " (".. property ..") = \"".. value .."\"")
             Ext.StatSetAttribute(statname, property, value)
         end
     end
+
     if Ext.StatGetAttribute("Projectile_InfectiousFlame", "DisplayName") == "Projectile_InfectiousFlame_DisplayName" then
         Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Overriding Projectile_InfectiousFlame_DisplayName with 'Projectile_InfectiousFlame_LLPURPLEFIRE_DisplayName'.")
         Ext.StatSetAttribute("Projectile_InfectiousFlame", "DisplayName", "Projectile_InfectiousFlame_LLPURPLEFIRE_DisplayName")
@@ -97,9 +179,12 @@ local ModuleLoad = function ()
     if Ext.IsModLoaded("aab53301-4f38-1d49-91f7-28dfa468084b") then
         Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Overriding Projectile_InfectiousFlame_Description with 'Projectile_InfectiousFlame_LLPURPLEFIRE_Odin_Description'.")
         Ext.StatSetAttribute("Projectile_InfectiousFlame", "Description", "Projectile_InfectiousFlame_LLPURPLEFIRE_Odin_Description")
-    elseif Ext.StatGetAttribute("Projectile_InfectiousFlame", "Description") == "Projectile_InfectiousFlame_Description" then
-        Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Overriding Projectile_InfectiousFlame_Description with 'Projectile_InfectiousFlame_LLPURPLEFIRE_Description'.")
-        Ext.StatSetAttribute("Projectile_InfectiousFlame", "Description", "Projectile_InfectiousFlame_LLPURPLEFIRE_Description")
+        Ext.StatSetAttribute("Projectile_IncarnateFireball", "Description", "Projectile_LLPURPLEFIRE_CursedFireball_Odin_Description")
+    else
+        if Ext.StatGetAttribute("Projectile_InfectiousFlame", "Description") == "Projectile_InfectiousFlame_Description" then
+            Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Overriding Projectile_InfectiousFlame_Description with 'Projectile_InfectiousFlame_LLPURPLEFIRE_Description'.")
+            Ext.StatSetAttribute("Projectile_InfectiousFlame", "Description", "Projectile_InfectiousFlame_LLPURPLEFIRE_Description")
+        end
     end
 end
 
@@ -129,6 +214,7 @@ function LLPURPLEFIRE_Ext_Debug()
         CharacterAddSkill(character, "Summon_Incarnate");
         CharacterAddSkill(character, "Target_NecrofireInfusion");
         CharacterAddSkill(character, "Zone_EnemyLaserRayCursed");
+        CharacterAddSkill(character, "Projectile_IncarnateFireball");
         ObjectSetFlag(character, "FTJ_RemoveSourceCollar", 0);
         CharacterOverrideMaxSourcePoints(character, 12);
         CharacterAddSourcePoints(character, 12);
