@@ -15,6 +15,11 @@ local stat_overrides = {
         PrepareEffect = "LLPURPLEFIRE_FX_Skills_Fire_Prepare_Voodoo_Root_02,KeepRot;LLPURPLEFIRE_FX_Skills_Fire_Prepare_Voodoo_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX",
         CastEffect = "LLPURPLEFIRE_FX_Skills_Fire_Cast_Beam_Fire_Hand_01:Dummy_CastFX:cast"
     },
+    Projectile_EnemyFireball_Witch = {
+        Template = "029817d2-82d7-4bd6-b30e-3d1f5efdc9c8",
+        PrepareEffect = "LLPURPLEFIRE_FX_Skills_NecroFireball_Prepare_Fire_Root_01,KeepRot;LLPURPLEFIRE_FX_Skills_NecroFireball_Prepare_Fire_Hand_01:Dummy_L_HandFX,Dummy_R_HandFX",
+        CastEffect = "LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Fire_Hand_01:Dummy_R_HandFX:cast;LLPURPLEFIRE_FX_Skills_NecroFireball_Cast_Throw_Hand_01:Dummy_R_HandFX",
+    },
     Projectile_EnemyFireball_Cursed = {
         Template = "029817d2-82d7-4bd6-b30e-3d1f5efdc9c8",
         PrepareEffect = "LLPURPLEFIRE_FX_Skills_NecroFireball_Prepare_Fire_Root_01,KeepRot;LLPURPLEFIRE_FX_Skills_NecroFireball_Prepare_Fire_Hand_01:Dummy_L_HandFX,Dummy_R_HandFX",
@@ -44,7 +49,8 @@ local stat_overrides = {
     -- Statuses
     INF_NECROFIRE = {
         StatusEffect = "LLPURPLEFIRE_FX_Char_ElementalDevil_NecroFire_A_01:Dummy_StatusFX",
-        FormatColor = "Summoner"
+        FormatColor = "Summoner",
+        Skills = "Projectile_EnemyFireball_Cursed;Projectile_IncarnateInfectiousFlame"
     },
     INF_NECROFIRE_G = {
         StatusEffect = "LLPURPLEFIRE_FX_Char_ElementalDevil_Giant_NecroFire_A_01:Dummy_StatusFX;LLPURPLEFIRE_FX_Char_ElementalDevil_NecroFire_A_02:Dummy_L_HandFX,Dummy_R_HandFX",
@@ -63,7 +69,6 @@ local stat_overrides = {
     }
 }
 
-stat_overrides["Projectile_EnemyFireball_Witch"] = stat_overrides["Projectile_EnemyFireball_Cursed"]
 -- Making the necrofire incarnate's fireball cursed
 stat_overrides["Projectile_IncarnateFireball"] = stat_overrides["Projectile_EnemyFireball_Cursed"]
 
@@ -75,6 +80,8 @@ local icon_overrides = {
     Projectile_InfectiousFlame = "LLPURPLEFIRE_Skills_EpidemicOfFire",
     Target_NecrofireInfusion = "LLPURPLEFIRE_Skills_NecroFireinfusion",
     Projectile_EnemyFireball_Cursed = "LLPURPLEFIRE_Skills_CursedFireball",
+    Projectile_IncarnateFireball = "LLPURPLEFIRE_Skills_CursedFireball",
+    Projectile_EnemyFireball_Witch = "LLPURPLEFIRE_Skills_CursedFireball",
     INF_NECROFIRE = "LLPURPLEFIRE_Skills_NecroFireinfusion",
     INF_NECROFIRE_G = "LLPURPLEFIRE_Skills_NecroFireinfusion",
     NECROFIRE = "LLPURPLEFIRE_Status_NecroFire",
