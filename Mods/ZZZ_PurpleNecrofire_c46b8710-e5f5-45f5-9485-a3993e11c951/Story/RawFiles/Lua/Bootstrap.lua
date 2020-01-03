@@ -39,7 +39,9 @@ local stat_overrides = {
         CastEffect = "LLPURPLEFIRE_FX_Skills_Totem_Cast_Target_Totem_NecroFire_Root_01;LLPURPLEFIRE_FX_Skills_Totem_Cast_Target_Totem_NecroFire_Hand_01,detach:Dummy_CastFX:cast",
         TargetEffect = "LLPURPLEFIRE_FX_Skills_Totem_Impact_Target_Root_NecroFire_01:Dummy_BodyFX:cast",
         TargetGroundEffect = "LLPURPLEFIRE_FX_Skills_Totem_Impact_Target_Root_NecroFire_01:Dummy_BodyFX:cast",
-        BeamEffect = "LLPURPLEFIRE_FX_GP_Beams_NecroFireBeam_01:Dummy_CastFX:Dummy_BodyFX:cast"
+        BeamEffect = "LLPURPLEFIRE_FX_GP_Beams_NecroFireBeam_01:Dummy_CastFX:Dummy_BodyFX:cast",
+        DisplayName = "Target_NecrofireInfusion_LLPURPLEFIRE_DisplayName",
+        Description = "Target_NecrofireInfusion_LLPURPLEFIRE_Description"
     },
     Zone_EnemyLaserRayCursed = {
         PrepareEffect = "LLPURPLEFIRE_FX_Skills_NecroFire_Prepare_LaserRay_Hand_01_Texkey:Dummy_R_HandFX:hand01;LLPURPLEFIRE_FX_Skills_NecroFire_Prepare_LaserRay_Hand_02_Texkey:Dummy_R_HandFX:hand02;LLPURPLEFIRE_FX_Skills_NecroFire_Prepare_LaserRay_Overhead_Texkey,KeepRot:Dummy_OverheadFX:hand02;RS3_FX_Skills_Fire_Prepare_LaserRay_Root_01_SFX:Dummy_Root",
