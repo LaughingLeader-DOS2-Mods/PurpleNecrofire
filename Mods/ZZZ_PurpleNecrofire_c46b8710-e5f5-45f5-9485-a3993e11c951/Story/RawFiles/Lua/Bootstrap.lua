@@ -221,7 +221,6 @@ end
 
 function LLPURPLEFIRE_Ext_Debug()
     local character = CharacterGetHostCharacter()
-    CharacterAddAbility(character, "Summoning", 10);
     if ObjectGetFlag(character, "LLPURPLEFIRE_DebugSet") == 0 then
         CharacterLevelUpTo(character, 11);
         CharacterApplyPreset(character, "Wizard_Act2");
