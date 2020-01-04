@@ -80,8 +80,14 @@ stat_overrides["Projectile_EnemyInfectiousFlame_Puppet"] = stat_overrides["Proje
 
 local icon_overrides = {
     Projectile_InfectiousFlame = "LLPURPLEFIRE_Skills_EpidemicOfFire",
+    Projectile_EnemyInfectiousFlame = "LLPURPLEFIRE_Skills_EpidemicOfFire",
+    Projectile_EnemyInfectiousFlame_Puppet = "LLPURPLEFIRE_Skills_EpidemicOfFire",
+    Projectile_IncarnateInfectiousFlame = "LLPURPLEFIRE_Skills_EpidemicOfFire",
+    Projectile_EnemyInfectiousFlame_Ooze = "LLPURPLEFIRE_Skills_EpidemicOfFire",
+    Projectile_EnemyInfectiousFlame_Adrama = "LLPURPLEFIRE_Skills_EpidemicOfFire",
     Target_NecrofireInfusion = "LLPURPLEFIRE_Skills_NecroFireinfusion",
     Projectile_EnemyFireball_Cursed = "LLPURPLEFIRE_Skills_CursedFireball",
+    Projectile_EnemyFireball_Cursed_Insect = "LLPURPLEFIRE_Skills_CursedFireball",
     Projectile_IncarnateFireball = "LLPURPLEFIRE_Skills_CursedFireball",
     Projectile_EnemyFireball_Witch = "LLPURPLEFIRE_Skills_CursedFireball",
     INF_NECROFIRE = "LLPURPLEFIRE_Skills_NecroFireinfusion",
@@ -89,10 +95,6 @@ local icon_overrides = {
     NECROFIRE = "LLPURPLEFIRE_Status_NecroFire",
     PERMANENT_NECROFIRE = "LLPURPLEFIRE_Status_NecroFire"
 }
-
-icon_overrides["Projectile_EnemyInfectiousFlame"] = icon_overrides["Projectile_InfectiousFlame"]
-icon_overrides["Projectile_IncarnateInfectiousFlame"] = icon_overrides["Projectile_InfectiousFlame"]
-icon_overrides["Projectile_EnemyInfectiousFlame_Puppet"] = icon_overrides["Projectile_InfectiousFlame"]
 
 local function get_stat_override(statname)
     for k,v in pairs(stat_overrides) do
