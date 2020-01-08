@@ -72,7 +72,7 @@ local stat_overrides = {
 }
 
 -- Making the necrofire incarnate's fireball cursed
-stat_overrides["Projectile_IncarnateFireball"] = stat_overrides["Projectile_EnemyFireball_Cursed"]
+--stat_overrides["Projectile_IncarnateFireball"] = stat_overrides["Projectile_EnemyFireball_Cursed"]
 
 stat_overrides["Projectile_EnemyInfectiousFlame"] = stat_overrides["Projectile_InfectiousFlame"]
 stat_overrides["Projectile_IncarnateInfectiousFlame"] = stat_overrides["Projectile_InfectiousFlame"]
@@ -88,7 +88,7 @@ local icon_overrides = {
     Target_NecrofireInfusion = "LLPURPLEFIRE_Skills_NecroFireinfusion",
     Projectile_EnemyFireball_Cursed = "LLPURPLEFIRE_Skills_CursedFireball",
     Projectile_EnemyFireball_Cursed_Insect = "LLPURPLEFIRE_Skills_CursedFireball",
-    Projectile_IncarnateFireball = "LLPURPLEFIRE_Skills_CursedFireball",
+    --Projectile_IncarnateFireball = "LLPURPLEFIRE_Skills_CursedFireball",
     Projectile_EnemyFireball_Witch = "LLPURPLEFIRE_Skills_CursedFireball",
     INF_NECROFIRE = "LLPURPLEFIRE_Skills_NecroFireinfusion",
     INF_NECROFIRE_G = "LLPURPLEFIRE_Skills_NecroFireinfusion",
@@ -202,7 +202,7 @@ local ModuleLoad = function ()
         if debug_print then Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Overriding Projectile_InfectiousFlame_Description with 'Projectile_InfectiousFlame_LLPURPLEFIRE_Odin_Description'."); end
         Ext.StatSetAttribute("Projectile_InfectiousFlame", "Description", "Projectile_InfectiousFlame_LLPURPLEFIRE_Odin_Description")
         Ext.StatSetAttribute("Projectile_IncarnateInfectiousFlame", "Description", "Projectile_InfectiousFlame_LLPURPLEFIRE_Odin_Description")
-        Ext.StatSetAttribute("Projectile_IncarnateFireball", "Description", "Projectile_LLPURPLEFIRE_CursedFireball_Odin_Description")
+        --Ext.StatSetAttribute("Projectile_IncarnateFireball", "Description", "Projectile_LLPURPLEFIRE_CursedFireball_Odin_Description")
         total_changes = total_changes + 2
     else
         if Ext.StatGetAttribute("Projectile_InfectiousFlame", "Description") == "Projectile_InfectiousFlame_Description" then
