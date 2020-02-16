@@ -229,16 +229,16 @@ function LLPURPLEFIRE_Ext_Debug()
     local character = CharacterGetHostCharacter()
     if ObjectGetFlag(character, "LLPURPLEFIRE_DebugSet") == 0 then
         CharacterLevelUpTo(character, 11);
-        CharacterApplyPreset(character, "Wizard_Act2");
+        --CharacterApplyPreset(character, "Wizard_Act2");
         CharacterAddSkill(character, "Projectile_InfectiousFlame");
         CharacterAddSkill(character, "Summon_Incarnate");
         CharacterAddSkill(character, "Target_NecrofireInfusion");
-        CharacterAddSkill(character, "Projectile_EnemyInfectiousFlame_Ooze");
-        CharacterAddSkill(character, "Projectile_EnemyInfectiousFlame_Adrama");
-        CharacterAddSkill(character, "Projectile_EnemyFireball_Cursed");
-        CharacterAddSkill(character, "Projectile_EnemyFireball_Cursed_Insect");
+        --CharacterAddSkill(character, "Projectile_EnemyInfectiousFlame_Ooze");
+        --CharacterAddSkill(character, "Projectile_EnemyInfectiousFlame_Adrama");
+        --CharacterAddSkill(character, "Projectile_EnemyFireball_Cursed");
+        --CharacterAddSkill(character, "Projectile_EnemyFireball_Cursed_Insect");
         CharacterAddSkill(character, "Zone_EnemyLaserRayCursed");
-        CharacterAddSkill(character, "Projectile_IncarnateFireball");
+        --CharacterAddSkill(character, "Projectile_IncarnateFireball");
         CharacterAddAbility(character, "FireSpecialist", 8);
         CharacterAddAbility(character, "EarthSpecialist", 8);
         CharacterAddAbility(character, "Summoning", 10);
