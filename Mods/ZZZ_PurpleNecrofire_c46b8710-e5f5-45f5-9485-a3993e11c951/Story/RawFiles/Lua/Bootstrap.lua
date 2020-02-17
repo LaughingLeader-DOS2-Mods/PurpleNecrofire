@@ -216,7 +216,7 @@ local ModuleLoad = function ()
     Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Changed ("..tostring(total_changes)..") properties in ("..tostring(total_stats)..") stats to use the new effects/icons/names.")
 end
 
-local function LLPURPLEFIRE_ModUpdated(id,author,past_version,new_version)
+local function LLPURPLEFIRE_ModUpdated(past_version,new_version)
     -- local version_is_less_than = _G["LeaderLib_Ext_VersionIsLessThan"]
     -- if version_is_less_than ~= nil then
     --     if version_is_less_than(past_version, 1,1,0,0) == true then
@@ -252,10 +252,10 @@ function LLPURPLEFIRE_Ext_Debug()
 end
 
 local function SessionLoading()
-    if _G["LeaderLib_Ext_RegisterMod"] ~= nil then
-        local func = _G["LeaderLib_Ext_RegisterMod"]
-        func("PurpleNecrofire", "LaughingLeader", 1,0,0,0, "c46b8710-e5f5-45f5-9485-a3993e11c951")
-    end
+    -- if _G["LeaderLib_Ext_RegisterMod"] ~= nil then
+    --     local func = _G["LeaderLib_Ext_RegisterMod"]
+    --     func("PurpleNecrofire", "LaughingLeader", 1,0,0,0, "c46b8710-e5f5-45f5-9485-a3993e11c951")
+    -- end
 
     if _G["LeaderLib_ModUpdater"] ~= nil then
         local update_table = _G["LeaderLib_ModUpdater"]
