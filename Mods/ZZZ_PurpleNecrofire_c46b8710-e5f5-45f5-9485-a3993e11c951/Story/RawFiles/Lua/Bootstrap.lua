@@ -228,7 +228,7 @@ end
 function LLPURPLEFIRE_Ext_Debug()
     local character = CharacterGetHostCharacter()
     if ObjectGetFlag(character, "LLPURPLEFIRE_DebugSet") == 0 then
-        CharacterLevelUpTo(character, 11);
+        --CharacterLevelUpTo(character, 11);
         --CharacterApplyPreset(character, "Wizard_Act2");
         CharacterAddSkill(character, "Projectile_InfectiousFlame");
         CharacterAddSkill(character, "Summon_Incarnate");
@@ -243,9 +243,9 @@ function LLPURPLEFIRE_Ext_Debug()
         CharacterAddAbility(character, "EarthSpecialist", 8);
         CharacterAddAbility(character, "Summoning", 10);
         CharacterAddAttribute(character, "Memory", 10);
-        ObjectSetFlag(character, "FTJ_RemoveSourceCollar", 0);
-        CharacterOverrideMaxSourcePoints(character, 12);
-        CharacterAddSourcePoints(character, 12);
+        --ObjectSetFlag(character, "FTJ_RemoveSourceCollar", 0);
+        --CharacterOverrideMaxSourcePoints(character, 12);
+        --CharacterAddSourcePoints(character, 12);
         ObjectSetFlag(character, "LLPURPLEFIRE_DebugSet", 0);
     end
     PartyAddGold(character, 30000)
