@@ -9,7 +9,7 @@ local function LLPURPLEFIRE_ModUpdated(past_version,new_version)
     -- end
 end
 
-function LLPURPLEFIRE_Ext_Debug()
+local function DebugInit()
     local character = CharacterGetHostCharacter()
     if ObjectGetFlag(character, "LLPURPLEFIRE_DebugSet") == 0 then
         --CharacterLevelUpTo(character, 11);
@@ -36,20 +36,15 @@ function LLPURPLEFIRE_Ext_Debug()
 end
 
 local function SessionLoading()
-    -- if _G["LeaderLib_Ext_RegisterMod"] ~= nil then
-    --     local func = _G["LeaderLib_Ext_RegisterMod"]
-    --     func("PurpleNecrofire", "LaughingLeader", 1,0,0,0, "c46b8710-e5f5-45f5-9485-a3993e11c951")
-    -- end
-
-    if _G["LeaderLib_ModUpdater"] ~= nil then
-        local update_table = _G["LeaderLib_ModUpdater"]
-        update_table["c46b8710-e5f5-45f5-9485-a3993e11c951"] = LLPURPLEFIRE_ModUpdated
-    end
-
-    if _G["LeaderLib_DebugInitCalls"] ~= nil then
-        local debug_table = _G["LeaderLib_DebugInitCalls"]
-        debug_table[#debug_table+1]= LLPURPLEFIRE_Ext_Debug
-    end
+	local LeaderLib = Mods.LeaderLib
+	if LeaderLib ~= nil then
+		if LeaderLib.RegisterModListener ~= nil then
+			LeaderLib.RegisterModListener("Updated", "c46b8710-e5f5-45f5-9485-a3993e11c951", LLPURPLEFIRE_ModUpdated)
+		end
+		if LeaderLib.AddDebugInitCall ~= nil then
+			LeaderLib.AddDebugInitCall(DebugInit)
+		end
+	end
 end
 
 Ext.RegisterListener("SessionLoading", SessionLoading)
