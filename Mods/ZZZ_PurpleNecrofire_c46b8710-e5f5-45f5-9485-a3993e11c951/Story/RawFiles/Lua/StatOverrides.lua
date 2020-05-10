@@ -205,6 +205,7 @@ local function OverrideStats()
 
 		-- Find which mod is overwriting the other.
 		if odinOverhaul and ee2Overhaul then
+			--local purpleNecroNum = 0
 			local odinNum = 0
 			local ee2Num = 0
 			for i,uuid in ipairs(Ext.GetModLoadOrder()) do
@@ -213,6 +214,9 @@ local function OverrideStats()
 				elseif uuid == "63bb9b65-2964-4c10-be5b-55a63ec02fa0" then
 					ee2Num = i
 				end
+				-- if uuid == "c46b8710-e5f5-45f5-9485-a3993e11c951" then
+				-- 	purpleNecroNum = i
+				-- end
 			end
 
 			if odinNum > ee2Num then
