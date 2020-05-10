@@ -1,5 +1,6 @@
 {
-    "RequiredExtensionVersion": 42,
+    "ModTable": "PurpleNecrofire",
+    "RequiredExtensionVersion": 44,
     "FeatureFlags": [
         "Lua"
     ]

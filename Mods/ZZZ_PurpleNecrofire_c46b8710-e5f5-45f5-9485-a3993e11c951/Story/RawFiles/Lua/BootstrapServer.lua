@@ -1,3 +1,4 @@
+Ext.Require("StatOverrides.lua")
 
 local function LLPURPLEFIRE_ModUpdated(past_version,new_version)
     -- local version_is_less_than = _G["LeaderLib_Ext_VersionIsLessThan"]
