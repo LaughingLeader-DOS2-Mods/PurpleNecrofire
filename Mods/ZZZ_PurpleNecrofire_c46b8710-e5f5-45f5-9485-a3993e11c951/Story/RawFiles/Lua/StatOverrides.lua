@@ -157,7 +157,7 @@ local function OverrideStats()
         icon_overrides["INF_NECROFIRE_CAT"] = icon_overrides["INF_NECROFIRE"]
     end
 
-    local debug_print = Ext.IsDeveloperMode()
+    local debug_print = false-- Ext.IsDeveloperMode()
 
     --LeaderLib_7e737d2f-31d2-4751-963f-be6ccc59cd0c
     if _G["LeaderLib"] ~= nil or Ext.IsModLoaded("7e737d2f-31d2-4751-963f-be6ccc59cd0c") then
@@ -172,9 +172,6 @@ local function OverrideStats()
                     Icon = value
                 }
             end
-        end
-        if _G["LeaderLib_Lua_PrintEnabled"] == true then
-            debug_print = true
         end
     end
 
@@ -246,4 +243,4 @@ local function OverrideStats()
     Ext.Print("[LLPURPLEFIRE:Bootstrap.lua] Changed ("..tostring(total_changes)..") properties in ("..tostring(total_stats)..") stats to use the new effects/icons/names.")
 end
 
-Ext.RegisterListener("ModuleLoading", OverrideStats)
+Ext.RegisterListener("StatsLoaded", OverrideStats)

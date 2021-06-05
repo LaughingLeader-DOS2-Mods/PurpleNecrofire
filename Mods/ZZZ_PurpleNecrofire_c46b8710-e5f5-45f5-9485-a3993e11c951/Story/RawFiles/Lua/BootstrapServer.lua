@@ -12,25 +12,25 @@ end
 local function DebugInit()
     local character = CharacterGetHostCharacter()
     if ObjectGetFlag(character, "LLPURPLEFIRE_DebugSet") == 0 then
-        --CharacterLevelUpTo(character, 11);
-        --CharacterApplyPreset(character, "Wizard_Act2");
-        CharacterAddSkill(character, "Projectile_InfectiousFlame");
-        CharacterAddSkill(character, "Summon_Incarnate");
-        CharacterAddSkill(character, "Target_NecrofireInfusion");
-        --CharacterAddSkill(character, "Projectile_EnemyInfectiousFlame_Ooze");
-        --CharacterAddSkill(character, "Projectile_EnemyInfectiousFlame_Adrama");
-        --CharacterAddSkill(character, "Projectile_EnemyFireball_Cursed");
-        --CharacterAddSkill(character, "Projectile_EnemyFireball_Cursed_Insect");
-        CharacterAddSkill(character, "Zone_EnemyLaserRayCursed");
-        --CharacterAddSkill(character, "Projectile_IncarnateFireball");
-        CharacterAddAbility(character, "FireSpecialist", 8);
-        CharacterAddAbility(character, "EarthSpecialist", 8);
-        CharacterAddAbility(character, "Summoning", 10);
-        CharacterAddAttribute(character, "Memory", 10);
-        --ObjectSetFlag(character, "FTJ_RemoveSourceCollar", 0);
-        --CharacterOverrideMaxSourcePoints(character, 12);
-        --CharacterAddSourcePoints(character, 12);
-        ObjectSetFlag(character, "LLPURPLEFIRE_DebugSet", 0);
+        --CharacterLevelUpTo(character, 11)
+        --CharacterApplyPreset(character, "Wizard_Act2")
+        CharacterAddSkill(character, "Projectile_InfectiousFlame")
+        CharacterAddSkill(character, "Summon_Incarnate")
+        CharacterAddSkill(character, "Target_NecrofireInfusion")
+        --CharacterAddSkill(character, "Projectile_EnemyInfectiousFlame_Ooze")
+        --CharacterAddSkill(character, "Projectile_EnemyInfectiousFlame_Adrama")
+        --CharacterAddSkill(character, "Projectile_EnemyFireball_Cursed")
+        --CharacterAddSkill(character, "Projectile_EnemyFireball_Cursed_Insect")
+        CharacterAddSkill(character, "Zone_EnemyLaserRayCursed")
+        --CharacterAddSkill(character, "Projectile_IncarnateFireball")
+        CharacterAddAbility(character, "FireSpecialist", 8)
+        CharacterAddAbility(character, "EarthSpecialist", 8)
+        CharacterAddAbility(character, "Summoning", 10)
+        CharacterAddAttribute(character, "Memory", 10)
+        --ObjectSetFlag(character, "FTJ_RemoveSourceCollar", 0)
+        --CharacterOverrideMaxSourcePoints(character, 12)
+        --CharacterAddSourcePoints(character, 12)
+        ObjectSetFlag(character, "LLPURPLEFIRE_DebugSet", 0)
     end
     PartyAddGold(character, 30000)
 end
@@ -41,12 +41,12 @@ local function SessionLoading()
 		if LeaderLib.RegisterModListener ~= nil then
 			LeaderLib.RegisterModListener("Updated", "c46b8710-e5f5-45f5-9485-a3993e11c951", LLPURPLEFIRE_ModUpdated)
         end
-        if Ext.IsDeveloperMode() then
-            if LeaderLib.AddDebugInitCall ~= nil then
-                LeaderLib.AddDebugInitCall(DebugInit)
-            end
-        end
+        -- if Ext.IsDeveloperMode() then
+        --     if LeaderLib.AddDebugInitCall ~= nil then
+        --         LeaderLib.AddDebugInitCall(DebugInit)
+        --     end
+        -- end
 	end
 end
 
-Ext.RegisterListener("SessionLoading", SessionLoading)
+--Ext.RegisterListener("SessionLoading", SessionLoading)
