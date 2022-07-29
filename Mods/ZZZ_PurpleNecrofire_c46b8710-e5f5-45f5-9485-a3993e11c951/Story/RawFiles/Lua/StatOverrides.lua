@@ -128,19 +128,19 @@ local function OverrideStats()
 
         icon_overrides["Projectile_Summon_InfectiousFire_Shorter"] = icon_overrides["Projectile_InfectiousFlame"]
         
-        stat_overrides["INF_NECROFIRE_INCARNATE_S"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_INCARNATE_G"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_BONEPILE"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_PLANT"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_CORPSE"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_OILBLOB"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_FIRESLUG"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_CONDOR"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_NEWT"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_POISONSLUG"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_SOULWOLF"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_TOY"] = { FormatColor = "Summon" }
-        stat_overrides["INF_NECROFIRE_CAT"] = { FormatColor = "Summon" }
+        stat_overrides["INF_NECROFIRE_INCARNATE_S"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_INCARNATE_G"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_BONEPILE"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_PLANT"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_CORPSE"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_OILBLOB"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_FIRESLUG"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_CONDOR"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_NEWT"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_POISONSLUG"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_SOULWOLF"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_TOY"] = { FormatColor = "Summoner" }
+        stat_overrides["INF_NECROFIRE_CAT"] = { FormatColor = "Summoner" }
 
         icon_overrides["INF_NECROFIRE_INCARNATE_S"] = icon_overrides["INF_NECROFIRE"]
         icon_overrides["INF_NECROFIRE_INCARNATE_G"] = icon_overrides["INF_NECROFIRE"]
